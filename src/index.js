@@ -581,14 +581,4 @@ window.renderTemplate = (alias, data) => {
 `);
   }
 };
-renderTemplate('chart');
-
-function lightTheme() {
-  body.classList.remove('theme__dark');
-  body.classList.add('theme__light');
-}
-
-function darkTheme() {
-  body.classList.remove('theme__light');
-  body.classList.add('theme__dark');
-}
+renderTemplate('leaders');
