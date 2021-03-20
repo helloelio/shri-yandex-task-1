@@ -153,7 +153,41 @@ const chartValueFiveteenValue = data[6].data.values[14].value;
 const chartValueSixteen = data[6].data.values[15];
 const chartValueSixteenTitle = data[6].data.values[15].title;
 const chartValueSixteenValue = data[6].data.values[15].value;
-
+//
+//
+//
+// =====================================================
+// diagram json from alias.chart to alias : diagram
+// =====================================================
+const diagramChart = data[8].alias;
+console.log(diagramChart);
+//
+const diagramCategoriesOne = data[8].data.categories[0];
+const diagramCategoriesTwo = data[8].data.categories[1];
+const diagramCategoriesThree = data[8].data.categories[2];
+const diagramCategoriesFour = data[8].data.categories[3];
+// console.log(diagramCategories);
+// //
+const diagramTitle = data[8].data.title;
+const diagramSubtitle = data[8].data.subtitle;
+const diagramTotalText = data[8].data.totalText;
+const diagramDifferenceText = data[8].data.differenceText;
+//
+const categoriesOneTitle = diagramCategoriesOne.title;
+const categoriesOneValueText = diagramCategoriesOne.valueText;
+const categoriesOneDifferenceText = diagramCategoriesOne.differenceText;
+//
+const categoriesTwoTitle = diagramCategoriesTwo.title;
+const categoriesTwoValueText = diagramCategoriesTwo.valueText;
+const categoriesTwoDifferenceText = diagramCategoriesTwo.differenceText;
+//
+const categoriesThreeTitle = diagramCategoriesThree.title;
+const categoriesThreeValueText = diagramCategoriesThree.valueText;
+const categoriesThreeDifferenceText = diagramCategoriesThree.differenceText;
+//
+const categoriesFourTitle = diagramCategoriesFour.title;
+const categoriesFourValueText = diagramCategoriesFour.valueText;
+const categoriesFourDifferenceText = diagramCategoriesFour.differenceText;
 // =====================================================
 // main function for render html templates
 // =====================================================
@@ -513,36 +547,33 @@ window.renderTemplate = (alias, data) => {
     /* diagram result template */
     return (body.innerHTML = `<div class="wrapper theme__dark">
     <header class="header header-diagram">
-      <div class="header__title">Размер коммитов</div>
-      <div class="header__subtitle">Спринт № 213</div>
+      <div class="header__title">${diagramTitle}</div>
+      <div class="header__subtitle">${diagramSubtitle}</div>
     </header>
       <div class="ellipse-block">
         <div class="ellipse">
-          <span class="ellipse-first-item"></span>
-          <span class="ellipse-second-item"></span>
-          <span class="ellipse-third-item"></span>
-          <span class="ellipse-fourth-item"></span>
+
           <div class="ellipse__text-inside">
-            <div class="ellipse__title">182 коммита</div>
-            <div class="ellipse__subtitle">+42 с прошлого спринта</div>
+            <div class="ellipse__title">${diagramTotalText}</div>
+            <div class="ellipse__subtitle">${diagramDifferenceText}</div>
           </div>
         </div>
         <div class="ellipse-statistic">
           <ul class="ellipse-statistic__items">
             <li class="ellipse-statistic__item">
-              > 1001 строки <span class="plus-statictic">+ 8</span>
+              ${categoriesOneTitle}<span class="plus-statictic">+8</span>
               <span class="all-statictic">30</span>
             </li>
             <li class="ellipse-statistic__item">
-              501 - 1000 строк <span class="plus-statictic">+ 6</span>
+              ${categoriesTwoTitle}<span class="plus-statictic">+ 6</span>
               <span class="all-statictic">32</span>
             </li>
             <li class="ellipse-statistic__item">
-              101 - 500 строк <span class="plus-statictic">+ 16</span>
+            ${categoriesThreeTitle}<span class="plus-statictic">+ 16</span>
               <span class="all-statictic">58</span>
             </li>
             <li class="ellipse-statistic__item">
-              1- 100 строк <span class="plus-statictic">+ 12</span>
+            ${categoriesFourTitle}<span class="plus-statictic">+ 12</span>
               <span class="all-statictic">62</span>
             </li>
           </ul>
@@ -582,3 +613,11 @@ window.renderTemplate = (alias, data) => {
   }
 };
 renderTemplate('leaders');
+
+// span for ellipse
+{
+  /* <span class="ellipse-first-item"></span>
+<span class="ellipse-second-item"></span>
+<span class="ellipse-third-item"></span>
+<span class="ellipse-fourth-item"></span> */
+}
