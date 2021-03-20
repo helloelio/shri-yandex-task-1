@@ -162,7 +162,7 @@ const body = document.querySelector('body');
 window.renderTemplate = (alias, data) => {
   if (alias === 'leaders') {
     /* leaders result template */
-    return (body.innerHTML = ` <div class="wrapper">
+    return (body.innerHTML = ` <div class="wrapper theme__dark">
     <header class="header header-leaders">
       <div class="header__title">${leadersTitle}</div>
       <div class="header__subtitle">${leadersSubtitle}</div>
@@ -261,7 +261,7 @@ window.renderTemplate = (alias, data) => {
     `);
   } else if (alias === 'vote') {
     /* vote result template */
-    return (body.innerHTML = `<div class="wrapper">
+    return (body.innerHTML = `<div class="wrapper theme__dark">
     <header class="header header-vote">
       <div class="header__title">${voteTitle}</div>
       <div class="header__subtitle">${voteSubtitle}</div>
@@ -403,7 +403,7 @@ window.renderTemplate = (alias, data) => {
 `);
   } else if (alias === 'chart') {
     /* chart result template */
-    return (body.innerHTML = `<div class="wrapper">
+    return (body.innerHTML = `<div class="wrapper theme__dark">
     <header class="header header-leaders">
       <div class="header__title">${ChartTitle}</div>
       <div class="header__subtitle">${ChartSubtitle}</div>
@@ -511,7 +511,7 @@ window.renderTemplate = (alias, data) => {
   `);
   } else if (alias === 'diagram') {
     /* diagram result template */
-    return (body.innerHTML = `<div class="wrapper">
+    return (body.innerHTML = `<div class="wrapper theme__dark">
     <header class="header header-diagram">
       <div class="header__title">Размер коммитов</div>
       <div class="header__subtitle">Спринт № 213</div>
@@ -552,7 +552,7 @@ window.renderTemplate = (alias, data) => {
   `);
   } else if (alias === 'activity') {
     /* activity result template */
-    return (body.innerHTML = `<div class="wrapper theme_dark">
+    return (body.innerHTML = `<div class="wrapper theme__dark">
     <header class="header header-voteResult">
       <div class="header__title">Коммиты, 1 неделя</div>
       <div class="header__subtitle">Спринт № 213</div>
