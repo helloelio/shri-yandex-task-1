@@ -193,6 +193,7 @@ const categoriesFourDifferenceText = diagramCategoriesFour.differenceText;
 // =====================================================
 const body = document.querySelector('body');
 body.classList.add('theme__dark');
+
 const bodyLight = document.querySelector('.theme__light');
 
 window.renderTemplate = (alias, data) => {
@@ -615,7 +616,7 @@ window.renderTemplate = (alias, data) => {
 `);
   }
 };
-renderTemplate('leaders');
+renderTemplate('vote');
 
 // span for ellipse
 {
@@ -625,28 +626,28 @@ renderTemplate('leaders');
 <span class="ellipse-fourth-item"></span> */
 }
 
-// if (body === bodyLight) {
-//   const secondColumn = document.querySelector('.second-column');
-//   const voteMiddle = secondColumn.querySelector('.vote-middle');
-//   const userChampionVote = voteMiddle.querySelector('.user-champion-dark');
-//   userChampionVote.classList.remove('user-champion-dark');
-//   userChampionVote.classList.add('user-champion-light');
-//   const bottomArrowLight = secondColumn.querySelector('.bottom-arrow-dark');
-//   bottomArrowLight.classList.remove('bottom-arrow-dark');
-//   bottomArrowLight.classList.add('bottom-arrow-light');
-//   // light for hoveк
-//   const firstColumn = document.querySelector('.first-column');
-//   const firstUserInBlock = firstColumn.querySelector('.firstUserInBlock');
-//   const userDarkOne = firstUserInBlock.querySelector('.user-dark');
-//   userDarkOne.classList.remove('user-dark');
-//   userDarkOne.classList.add('user-light');
-//   //
-//   const voteMiddleHover = firstColumn.querySelector('.vote-middle');
-//   const userDarkTwo = voteMiddleHover.querySelector('.user-dark');
-//   userDarkTwo.classList.remove('user-dark');
-//   userDarkTwo.classList.add('user-light');
-//   //
-// }
+if (body === bodyLight) {
+  const secondColumn = document.querySelector('.second-column');
+  const voteMiddle = secondColumn.querySelector('.vote-middle');
+  const userChampionVote = voteMiddle.querySelector('.user-champion-dark');
+  userChampionVote.classList.remove('user-champion-dark');
+  userChampionVote.classList.add('user-champion-light');
+  const bottomArrowLight = secondColumn.querySelector('.bottom-arrow-dark');
+  bottomArrowLight.classList.remove('bottom-arrow-dark');
+  bottomArrowLight.classList.add('bottom-arrow-light');
+  // light for hoveк
+  const firstColumn = document.querySelector('.first-column');
+  const firstUserInBlock = firstColumn.querySelector('.firstUserInBlock');
+  const userDarkOne = firstUserInBlock.querySelector('.user-dark');
+  userDarkOne.classList.remove('user-dark');
+  userDarkOne.classList.add('user-light');
+  //
+  const voteMiddleHover = firstColumn.querySelector('.vote-middle');
+  const userDarkTwo = voteMiddleHover.querySelector('.user-dark');
+  userDarkTwo.classList.remove('user-dark');
+  userDarkTwo.classList.add('user-light');
+  //
+}
 
 if (body === bodyLight) {
   let fiveChart = document.querySelector('.five-chart');
