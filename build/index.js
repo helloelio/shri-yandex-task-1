@@ -657,6 +657,7 @@ renderTemplate('leaders');
 //   //
 // }
 
+// light theme for leaders
 if (body === bodyLight) {
   body.classList.remove('theme__dark');
   let fiveChart = document.querySelector('.five-chart');
@@ -683,8 +684,6 @@ if (body === bodyLight) {
   let fourthChartDiagram = fourthChart.querySelector('.diagram-fourth');
   fourthChartDiagram.classList.remove('diagram-dark');
   fourthChartDiagram.classList.add('diagram-light');
-  // imageAvatar.style.filter = 'saturate(1)';
-  //
 }
 // light theme for vote
 //
