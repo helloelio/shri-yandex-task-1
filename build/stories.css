@@ -634,7 +634,7 @@ main {
 }
 .third-chart {
   height: calc(345px - 100px);
-  margin-top: 50px;
+  margin-top: 100px;
   margin-right: -16px;
 }
 .fourth-chart {
