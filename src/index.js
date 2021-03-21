@@ -77,6 +77,15 @@ const voteTitle = data[2].data.title;
 const voteSubtitle = data[2].data.subtitle;
 const voteEmoji = data[2].data.emoji;
 //
+const voteUserOne = data[2].data.users[0];
+const voteUserOneName = data[2].data.users[0].name;
+const voteUserTwoName = data[2].data.users[1].name;
+const voteUserThreeName = data[2].data.users[2].name;
+const voteUserFourName = data[2].data.users[3].name;
+const voteUserFiveName = data[2].data.users[4].name;
+const voteUserSixName = data[2].data.users[5].name;
+const voteUserSevenName = data[2].data.users[6].name;
+const voteUserEightName = data[2].data.users[7].name;
 //
 //
 // =====================================================
@@ -192,7 +201,6 @@ const categoriesFourDifferenceText = diagramCategoriesFour.differenceText;
 // main function for render html templates
 // =====================================================
 const body = document.querySelector('body');
-body.classList.add('theme__dark');
 
 const bodyLight = document.querySelector('.theme__light');
 
@@ -317,7 +325,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserOneName}</div>
           </div>
         </div>
         <!-- first block -->
@@ -332,7 +340,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserFourName}</div>
           </div>
         </div>
         <!-- second block -->
@@ -347,7 +355,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserSixName}</div>
           </div>
         </div>
         <!-- third block -->
@@ -368,7 +376,7 @@ window.renderTemplate = (alias, data) => {
               />
               <span class="leader-emoji">${voteEmoji}</span>
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserTwoName}</div>
           </div>
         </div>
 
@@ -384,7 +392,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserFiveName}</div>
           </div>
         </div>
         <button class="arrow bottom-arrow-dark"></button>
@@ -402,7 +410,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserThreeName}</div>
           </div>
         </div>
         <!--  -->
@@ -416,7 +424,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserSixName}</div>
           </div>
         </div>
         <!--  -->
@@ -430,7 +438,7 @@ window.renderTemplate = (alias, data) => {
                 alt=""
               />
             </div>
-            <div class="user__name">Александр Иванков</div>
+            <div class="user__name">${voteUserEightName}</div>
           </div>
         </div>
       </section>
@@ -616,7 +624,7 @@ window.renderTemplate = (alias, data) => {
 `);
   }
 };
-renderTemplate('vote');
+renderTemplate('leaders');
 
 // span for ellipse
 {
