@@ -192,11 +192,12 @@ const categoriesFourDifferenceText = diagramCategoriesFour.differenceText;
 // main function for render html templates
 // =====================================================
 const body = document.querySelector('body');
+const bodyLight = document.querySelector('.theme__light');
 
 window.renderTemplate = (alias, data) => {
   if (alias === 'leaders') {
     /* leaders result template */
-    return (body.innerHTML = ` <div class="wrapper theme__dark">
+    return (body.innerHTML = ` <div class="wrapper">
     <header class="header header-leaders">
       <div class="header__title">${leadersTitle}</div>
       <div class="header__subtitle">${leadersSubtitle}</div>
@@ -295,7 +296,8 @@ window.renderTemplate = (alias, data) => {
     `);
   } else if (alias === 'vote') {
     /* vote result template */
-    return (body.innerHTML = `<div class="wrapper theme__dark">
+
+    return (body.innerHTML = `<div class="wrapper">
     <header class="header header-vote">
       <div class="header__title">${voteTitle}</div>
       <div class="header__subtitle">${voteSubtitle}</div>
@@ -353,9 +355,9 @@ window.renderTemplate = (alias, data) => {
       <!-- USER VOTE -->
       <!-- fourth block -->
       <section class="column second-column">
-        <button class="arrow top-arrow"></button>
+        <button class="arrow top-arrow-dark"></button>
         <div class="vote vote-middle">
-          <div class="user user-champion">
+          <div class="user user-champion-dark">
             <div class="user__avatar">
               <img
                 class="user-avatar-image"
@@ -383,7 +385,7 @@ window.renderTemplate = (alias, data) => {
             <div class="user__name">Александр Иванков</div>
           </div>
         </div>
-        <button class="arrow bottom-arrow"></button>
+        <button class="arrow bottom-arrow-dark"></button>
       </section>
       <!-- five block-->
 
@@ -437,7 +439,7 @@ window.renderTemplate = (alias, data) => {
 `);
   } else if (alias === 'chart') {
     /* chart result template */
-    return (body.innerHTML = `<div class="wrapper theme__dark">
+    return (body.innerHTML = `<div class="wrapper">
     <header class="header header-leaders">
       <div class="header__title">${ChartTitle}</div>
       <div class="header__subtitle">${ChartSubtitle}</div>
@@ -545,7 +547,7 @@ window.renderTemplate = (alias, data) => {
   `);
   } else if (alias === 'diagram') {
     /* diagram result template */
-    return (body.innerHTML = `<div class="wrapper theme__dark">
+    return (body.innerHTML = `<div class="wrapper">
     <header class="header header-diagram">
       <div class="header__title">${diagramTitle}</div>
       <div class="header__subtitle">${diagramSubtitle}</div>
@@ -583,7 +585,7 @@ window.renderTemplate = (alias, data) => {
   `);
   } else if (alias === 'activity') {
     /* activity result template */
-    return (body.innerHTML = `<div class="wrapper theme__dark">
+    return (body.innerHTML = `<div class="wrapper">
     <header class="header header-voteResult">
       <div class="header__title">Коммиты, 1 неделя</div>
       <div class="header__subtitle">Спринт № 213</div>
@@ -621,3 +623,57 @@ renderTemplate('leaders');
 <span class="ellipse-third-item"></span>
 <span class="ellipse-fourth-item"></span> */
 }
+
+// if (body === bodyLight) {
+//   const secondColumn = document.querySelector('.second-column');
+//   const voteMiddle = secondColumn.querySelector('.vote-middle');
+//   const userChampionVote = voteMiddle.querySelector('.user-champion-dark');
+//   userChampionVote.classList.remove('user-champion-dark');
+//   userChampionVote.classList.add('user-champion-light');
+//   const bottomArrowLight = secondColumn.querySelector('.bottom-arrow-dark');
+//   bottomArrowLight.classList.remove('bottom-arrow-dark');
+//   bottomArrowLight.classList.add('bottom-arrow-light');
+//   // light for hoveк
+//   const firstColumn = document.querySelector('.first-column');
+//   const firstUserInBlock = firstColumn.querySelector('.firstUserInBlock');
+//   const userDarkOne = firstUserInBlock.querySelector('.user-dark');
+//   userDarkOne.classList.remove('user-dark');
+//   userDarkOne.classList.add('user-light');
+//   //
+//   const voteMiddleHover = firstColumn.querySelector('.vote-middle');
+//   const userDarkTwo = voteMiddleHover.querySelector('.user-dark');
+//   userDarkTwo.classList.remove('user-dark');
+//   userDarkTwo.classList.add('user-light');
+//   //
+// }
+
+if (body === bodyLight) {
+  let fiveChart = document.querySelector('.five-chart');
+  let fiveChartDiagram = fiveChart.querySelector('.diagram-five');
+  fiveChartDiagram.classList.remove('diagram-dark');
+  fiveChartDiagram.classList.add('diagram-light');
+  //
+  let thirdChart = document.querySelector('.third-chart');
+  let thirdChartDiagram = thirdChart.querySelector('.diagram-third');
+  thirdChartDiagram.classList.remove('diagram-dark');
+  thirdChartDiagram.classList.add('diagram-light');
+  //
+  let firstChart = document.querySelector('.first-chart');
+  let firstChartDiagram = firstChart.querySelector('.diagram-first-dark');
+  firstChartDiagram.classList.remove('diagram-first-dark');
+  firstChartDiagram.classList.add('diagram-first-light');
+  //
+  let secondChart = document.querySelector('.second-chart');
+  let secondChartDiagram = secondChart.querySelector('.diagram-second');
+  secondChartDiagram.classList.remove('diagram-dark');
+  secondChartDiagram.classList.add('diagram-light');
+  //
+  let fourthChart = document.querySelector('.fourth-chart');
+  let fourthChartDiagram = fourthChart.querySelector('.diagram-fourth');
+  fourthChartDiagram.classList.remove('diagram-dark');
+  fourthChartDiagram.classList.add('diagram-light');
+  // imageAvatar.style.filter = 'saturate(1)';
+  //
+}
+// light theme for vote
+//
