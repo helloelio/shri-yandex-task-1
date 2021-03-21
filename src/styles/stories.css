@@ -91,7 +91,7 @@ button:active {
 }
 .header__subtitle {
   font-family: 'RobotoMedium';
-  font-size: 19px;
+  font-size: 18px;
   line-height: 22px;
   margin-top: 8px;
   color: #918f8a;
@@ -131,7 +131,13 @@ main {
   justify-content: center;
   height: 162px;
 }
-.user-dark:hover {
+.user-third {
+  margin-right: 12px;
+}
+.user-second {
+  margin-left: 12px;
+}
+.user- .user-dark:hover {
   background: radial-gradient(
     85.62% 148.33% at 49.85% 100%,
     rgba(68, 58, 42, 0.7864) 0%,
@@ -203,7 +209,7 @@ main {
 .chart {
   width: 100%;
   height: 100%;
-  margin-top: 35px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -279,8 +285,8 @@ main {
   z-index: 4;
 }
 .third-chart {
-  height: calc(325px - 100px);
-  margin-top: 100px;
+  height: calc(345px - 100px);
+  margin-top: 50px;
   margin-right: -16px;
 }
 .fourth-chart {
@@ -315,6 +321,30 @@ main {
   .first-chart {
     height: 100%;
   }
+  .diagram-first-dark {
+    background: radial-gradient(
+      91.67% 122.17% at 69.17% -30.17%,
+      #ffa300 0%,
+      #2d1c00 100%
+    );
+    box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4),
+      inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+  }
+  .diagram-dark {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) -30.22%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      radial-gradient(
+        149.08% 95.38% at 38.75% 71.48%,
+        #000000 45%,
+        #231900 80.01%,
+        #4d4d4d 100%
+      );
+    box-shadow: inset -1px 1px 1px rgb(255 255 255 / 20%),
+      inset 2px 2px 16px rgb(103 103 103 / 60%);
+  }
   .diagram-first {
     min-height: 108px;
   }
@@ -337,6 +367,12 @@ main {
   }
   div.vote {
     margin-bottom: 5px;
+  }
+  button.top-arrow-dark {
+    margin-bottom: 50px;
+  }
+  button.top-arrow-light {
+    margin-bottom: 50px;
   }
   .first-column {
     max-width: 210px;
@@ -471,11 +507,13 @@ main {
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
+  margin-top: -2px;
 }
 .vote {
   margin-bottom: 25px;
   max-width: 104px;
 }
+
 .user-champion-dark {
   background: radial-gradient(
     91.67% 122.17% at 69.17% -11.17%,

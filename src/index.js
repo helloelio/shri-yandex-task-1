@@ -375,7 +375,7 @@ window.renderTemplate = (alias, data) => {
                 src="${avatar4}"
                 alt=""
               />
-              <span class="leader-emoji">${voteEmoji}</span>
+              <span class="leader-emoji">👍</span>
             </div>
             <div class="user__name">${voteUserTwoName}</div>
           </div>
