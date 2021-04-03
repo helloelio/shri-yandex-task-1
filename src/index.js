@@ -201,7 +201,7 @@ const categoriesFourDifferenceText = diagramCategoriesFour.differenceText;
 // main function for render html templates
 // =====================================================
 const body = document.querySelector('body');
-body.classList.add('theme__dark');
+body.classList.add('theme__light');
 
 const bodyLight = document.querySelector('.theme__light');
 
